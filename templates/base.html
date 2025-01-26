@@ -1,0 +1,30 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<nav>
+    <a href="/">Home </a>
+    <a href="/about">About </a>
+    <a href="/testapp">Testapp </a>
+</nav>
+<head>
+    <meta charset="utf-8">
+    <title>My Personal Blog</title>
+    
+    <!-- can include a java script here -->
+</head>
+<body>
+    <h1>My Personal Blog</h1>
+    <!-- <a href="{% url 'blog_index' %}">Home</a> <a href="/about">About</a>  -->
+<hr>
+<hr>
+
+
+{% block page_title %}{% endblock %}
+{% block page_content %}{% endblock %}
+
+</body>
+</html>

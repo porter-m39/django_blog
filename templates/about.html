@@ -1,0 +1,37 @@
+<!-- templates/about.html -->
+
+{% extends "base.html" %}
+
+{% block page_title %} 
+    About me
+{% endblock %}
+{% block page_content %}
+    <h1>About me</h1>
+    <a href="{% url 'blog_index' %}">Home</a>
+    <hr>
+    <h2> Wazzup </h2> 
+{% endblock %}
+
+
+
+
+{% comment %} 
+<!-- <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<h1>About me</h1>
+<a href="{% url 'blog_index' %}">Home</a>
+<hr>
+{% block page_title %}{% endblock page_title %}
+{% block page_content %}{% endblock page_content %}
+</body>
+</html>
+-->
+ {% endcomment %}
+
