@@ -6,20 +6,13 @@
 
 {% block page_title %}
     <h2>Blog Posts</h2>
-
-    {% load static %}
-    <!--<img 
-    class="banner"
-    src="{% static 'stemgif.jpg' %}" alt="silly STEM joke" >-->
 {% endblock page_title %}
-
-
     
 
 {% block page_content %}
     {% block posts %}
         {% for post in posts %}
-            <h3><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h3>
+            <h3><a href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a></h3>
             <small>
                 {{ post.created_on.date }} | Categories:
                 {% for category in post.categories.all %}
@@ -32,3 +25,16 @@
         {% endfor %}
     {% endblock posts %}
 {% endblock page_content %}
+
+ {% comment %} {% block page_content%}
+<section>
+<h1> Posts </h1>
+{% for post in posts %}
+    <article class="post">
+        <h2> {{ post.title }} </h2>
+        <p> {{ post.date }} </p>
+        <p> {{ post.body }}</p>
+    </article>
+{% endfor %}
+</section>
+{% endblock %}  {% endcomment %}

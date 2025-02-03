@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <nav>
-    <a href="/">Home </a>
-    <a href="/about">About </a>
+    <a href={% url 'blog_index' %}>Home </a>
+    <a href= {% url 'about' %}>About </a>
     <a href="/testapp">Testapp </a>
 </nav>
 <head>

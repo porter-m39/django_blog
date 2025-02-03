@@ -1,4 +1,5 @@
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render
 from blog.models import Post, Comment
 from blog.forms import CommentForm
@@ -22,8 +23,8 @@ def blog_category(request, category):
     }
     return render(request, "blog/category.html", context)
     
-def blog_detail(request, pk):
-    post = Post.objects.get(pk=pk)
+def blog_detail(request, slug):
+    post = Post.objects.get(slug=slug)
     form = CommentForm()
     if request.method == "POST":
         form = CommentForm(request.POST)
@@ -44,3 +45,17 @@ def blog_detail(request, pk):
     }
 
     return render(request, "blog/detail.html", context)
+
+#def blog_detail(request, slug):
+    # post = Post.objects.get(pk=pk)
+    # form = CommentForm()
+    # if request.method == "POST":
+    #     form = CommentForm(request.POST)
+    #     if form.is_valid():
+    #         comment = Comment(
+    #             author=form.cleaned_data["author"],
+    #             body=form.cleaned_data["body"],
+    #             post=post,
+    #         )
+    #         comment.save()
+#    return HttpResponse(slug)
