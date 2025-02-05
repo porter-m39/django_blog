@@ -1,4 +1,4 @@
-#from django.http import HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 
 def homepage(request):
@@ -6,5 +6,8 @@ def homepage(request):
     return render(request, 'base.html')
 
 def about(request):
-    #return HttpResponse("Here's a bit about me.")
-    return render(request, 'about.html')
+    return HttpResponse("Here's a bit about me.")
+    #return render(request, 'about.html')
+
+def test2(request):
+    return HttpResponse("Testing out an admin option in nav bar.")

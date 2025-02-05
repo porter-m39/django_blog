@@ -1,8 +1,0 @@
-Sunday, Feb 2
-
-Today, my nav bar is not working. I'm not sure why.
-I remember getting the "default image" feature working last week, but it doesn't seem to be working today.
-For now, taking a break from getting images to work. Some good, concrete goals for this week are:
-- Fix navigation bar
-- Try to set up website as you would want your personal website to look
-- Then, start over and make a personal website
