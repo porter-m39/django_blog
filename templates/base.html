@@ -1,16 +1,19 @@
 <!-- templates/base.html -->
 
 <!DOCTYPE html>
+{% load crispy_forms_tags %}
 {% load static %}
 <html lang="en">
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<nav>
+<link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+{% comment %} <link rel="stylesheet" type = "text/css" href="{% static 'css/style.css' %}"> {% endcomment %}
+
+{% comment %} <nav>
     <a href={% url 'blog_index' %}>Home </a>
     <a href= {% url 'about' %}>About </a>
     <a href="/testapp">Testapp </a>
     <a href={% url 'test2' %}>Hi </a>
-</nav>
+</nav> {% endcomment %}
 <head>
     <meta charset="utf-8">
     <title>My Personal Blog</title>
